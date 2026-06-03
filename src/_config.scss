@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Cause' ;
+  src: url('./assets/Fonts/Cause-Medium.ttf');
+}
+
+@font-face {
+  font-family:'Macondo' ;
+  src: url('./assets/Fonts/MacondoSwashCaps-Regular.ttf');
+}
+
+// ejemplo de cómo son las variables en css normal(aquí ya no lo usamos)
+:root{
+  --color: black;
+}
+
+
+// VARIABLES Fuentes y colores (sólo válidas en scss)
+$fuenteText:'Cause';
+$fuenteHeaders: 'Macondo';
+$color00:white;
+$color01: black;
+$color02: #1aeca4;
+$color03: #008cd5;
+$color04: #410a6e;
+
+$tablet:800px;
+$desktop:1300px;
+
+header, nav, main, footer, section{
+  width: 100%;
+}
