@@ -1,4 +1,5 @@
 @use 'config' as c;
+@use 'art01';
 
 header{
   height: 100dvh;   
@@ -16,17 +17,13 @@ h1{
   font-weight: 900;
   color: c.$color00;
   font-family:c.$fuenteHeaders;
-
-  @media only screen and(min-width: c.$tablet){
-   color:red;
+  @media only screen and (min-width:c.$tablet){
+    color: red;
   }
-
-  @media only screen and(min-width: c.$desktop){
-   color:c.$color03;
+  @media only screen and (min-width:c.$desktop){
+    color: rgb(26, 255, 0);
   }
-    
-  }
-
+}
 
 .boton{
   text-decoration: none;
@@ -37,11 +34,14 @@ h1{
   padding: 1rem 3rem;
   border-radius: 5px;
   transition: .5s;
+  @media only screen and (min-width:c.$tablet){
+    color: red;
+  }
+  @media only screen and (min-width:c.$desktop){
+    color: rgb(26, 255, 0);
+  }
   &:hover{
     color: c.$color04;
     background-color: c.$color00;
   }
-
-
-
 }
