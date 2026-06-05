@@ -1,0 +1,59 @@
+@use 'config.scss' as c;
+
+.art03{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    overflow: hidden; //esto no seria necesario al decir q img es 100%
+
+
+     @media only screen and (min-width:c.$tablet){
+        width: 80%;
+        flex-direction: row;
+        justify-content: center;
+        //align-items: flex-start;
+        align-items: stretch;
+        //column-gap: 2rem; Lo quita pq quierw q ocupe el 50%
+    }
+
+    >:nth-child(1){
+        width: 100%;
+        //height: 40%;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.5rem;
+        text-align: center;
+        justify-content: center;
+        row-gap: 2rem;
+
+        @media only screen and (min-width:c.$tablet){
+        width:50%;
+        padding: initial;//primero borro el anterior pading del movil
+        padding-right: 1rem;
+        
+        >:nth-child(1){ //este es pa el h3 d esa div, mejor colocar como hijo y no compo h3,pq pude ser q despues sea un h2
+            width: 100%;
+            text-align: left;
+            background-color: aquamarine;
+        }
+
+        }
+    }
+
+    >img{
+        width: 100%;
+        height: 100%;
+
+        @media only screen and (min-width:c.$desktop){
+        width: 50%;
+       
+    }
+    }
+    
+
+}

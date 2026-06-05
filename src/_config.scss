@@ -20,7 +20,6 @@
   --color: black;
 }
 
-
 // VARIABLES Fuentes y colores (sólo válidas en scss)
 $fuenteText:'Cause';
 $fuenteHeaders: 'Macondo';
@@ -50,7 +49,10 @@ section{
   }
 }
 
-h1, h2, h3{
+h1, h2, h3,h4{
  font-family:$fuenteHeaders;
- color:$color03;
+}
+
+h3{
+  color:$color03;
 }
