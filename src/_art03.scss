@@ -2,6 +2,7 @@
 
 .art03{
     width: 100%;
+    //height: 50dvh;AQUI NOOOOOOO!!
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,10 +16,19 @@
         flex-direction: row;
         justify-content: center;
         //align-items: flex-start;
-        align-items: stretch;
+        align-items: stretch;//el tamaño d los hijos sera el del hijo mas grande
         //column-gap: 2rem; Lo quita pq quierw q ocupe el 50%
     }
 
+    &:has(.invert) {
+        @media only screen and (min-width:c.$tablet){
+            :nth-child(1){
+                order: 1;
+            }
+        }
+  /* Estilos que se aplican al contenedor */
+    }
+    
     >:nth-child(1){
         width: 100%;
         //height: 40%;
@@ -28,32 +38,53 @@
         align-items: center;
         padding: 0 1.5rem;
         text-align: center;
-        justify-content: center;
+        //justify-content: center;
+        justify-content: flex-start;
         row-gap: 2rem;
 
         @media only screen and (min-width:c.$tablet){
         width:50%;
-        padding: initial;//primero borro el anterior pading del movil
+        //padding: 0 1.5rem;
+        padding:  1.5rem 0;
+        //padding: initial;//primero borro el anterior pading del movil
         padding-right: 1rem;
-        
-        >:nth-child(1){ //este es pa el h3 d esa div, mejor colocar como hijo y no compo h3,pq pude ser q despues sea un h2
-            width: 100%;
-            text-align: left;
-            background-color: aquamarine;
+        row-gap: 2rem;
         }
-
+        >:nth-child(1){
+            text-align: center;
+            @media only screen and (min-width:c.$tablet){
+                align-self: start;
+            }
         }
     }
+    >:nth-child(2){ //este es pa el h3 d esa div, mejor colocar como hijo y no compo h3,pq pude ser q despues sea un h2
+            //Ahora creo una div q contiene a la img,asi q este es el hijo y no la img
+        width: 100%;
+        //text-align: left; esto lo quita
+        height: 50dvh;
+        background-color: aquamarine;
+        overflow: hidden;
+        position: relative;
+        @media only screen and (min-width:c.$tablet){
+            width: 50%;
+        }
 
-    >img{
+        >img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position:absolute;
+        }
+        
+  
+   /* >img{
         width: 100%;
         height: 100%;
 
         @media only screen and (min-width:c.$desktop){
-        width: 50%;
-       
-    }
+        width: 50%; 
+    }*/
     }
     
-
 }
