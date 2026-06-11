@@ -5,16 +5,19 @@
 //distribucion
     width: 100%; //el alto lo q ocupe el article
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     
         @media only screen and (min-width:c.$tablet){
             width:70%;
+            flex-direction: row;
+            flex-wrap: wrap;
 
         }
     
         @media only screen and (min-width:c.$desktop){
             width:70%;
+            flex-direction: row;
+            flex-wrap: wrap;
 
         }
      
@@ -28,6 +31,24 @@
             width:60%;
 
         }
+    
+    >:nth-child(1){
+        width: 100%; //en movil a sangre
+
+        @media only screen and (min-width:c.$tablet){
+            width:80%; //en tablet 
+
+        }
+    }
+
+    >:nth-child(2){
+        width: 100%;
+
+          @media only screen and (min-width:c.$tablet){
+            width:20%;
+
+        }
+    }
 
          >:nth-child(1){//como no tiene tamaño caja d texto.
             width: 100%;
