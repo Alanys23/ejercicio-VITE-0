@@ -3,8 +3,49 @@
 .artPersonal01{
 
 //distribucion
-    width: 60%; //el alto lo q ocupe el article
-    display: flex; 
+    width: 100%; //el alto lo q ocupe el article
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+        @media only screen and (min-width:c.$tablet){
+            width:70%;
+
+        }
+    
+        @media only screen and (min-width:c.$desktop){
+            width:70%;
+
+        }
+     
+    //lO XOMUN EN DESTACADOS Y NOTICIAS
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+         @media only screen and (min-width:c.$tablet){
+            width:60%;
+
+        }
+
+         >:nth-child(1){//como no tiene tamaño caja d texto.
+            width: 100%;
+            text-align: left;
+
+            }
+        }
+
+   
+        //Solo al div 1(lo especial9.DESTACADOS
+    :nth-child(1){
+
+    }
+
+    //Solo al div 1(lo especial9.NOTICIAS
+    :nth-child(2){
+
+    }
 
 
 
